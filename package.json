@@ -32,7 +32,10 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "get-dark-cli": "curl https://dark-cli.storage.googleapis.com/latest/dark-cli-apple --output dark-cli-apple && chmod +x dark-cli-apple",
+    "build-dark-assets": "PUBLIC_URL=DARK_STATIC_ASSETS_BASE_URL npm run build",
+    "deploy": "./dark-cli-apple public --canvas $DARK_STATIC_ASSETS_BASE_URL --user $DARK_USERNAME --password $DARK_PASSWORD"
   },
   "repository": {
     "type": "git",
